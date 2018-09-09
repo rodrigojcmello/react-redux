@@ -1,0 +1,69 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true,
+            "experimentalObjectRestSpread": true
+        }
+    },
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "parser": "babel-eslint",
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "quotes": [
+            "warn",
+            "single"
+        ],
+        "jsx-quotes": [
+            "warn",
+            "prefer-single"
+        ],
+        "semi": [
+            "warn",
+            "always",
+            {
+                "omitLastInOneLineBlock": true
+            }
+        ],
+        "arrow-parens": [
+            "warn",
+            "always"
+        ],
+        "no-var": "error",
+        "no-console": "off",
+        "no-unused-vars": "warn",
+        "no-case-declarations": "off",
+        "react/prop-types": "off",
+        "react/jsx-no-undef": [
+            "error",
+            {
+                "allowGlobals": true
+            }
+        ]
+    },
+    "globals": {
+        "React": true,
+        "Component": true,
+        "PureComponent": true,
+        "createRef": true,
+        "forwardRef": true,
+        "createContext": true,
+        "update": true,
+        "store": true,
+        "swal": true,
+        "ajax": true,
+        "Contexto": true,
+        "$": true
+    }
+}

@@ -4,15 +4,15 @@ import { VisibilityFilters } from '../actions';
 
 const Filtro = () => (
     <div>
-        <span>Show: </span>
-        <FilterLink filter={VisibilityFilters.SHOW_ALL}>
-            All
+        <span>Exibir: </span>
+        <FilterLink filtro={VisibilityFilters.SHOW_ALL}>
+            Todas
         </FilterLink>
-        <FilterLink filter={VisibilityFilters.SHOW_ACTIVE}>
-            Active
+        <FilterLink filtro={VisibilityFilters.SHOW_ACTIVE}>
+            Ativas
         </FilterLink>
-        <FilterLink filter={VisibilityFilters.SHOW_COMPLETED}>
-            Completed
+        <FilterLink filtro={VisibilityFilters.SHOW_COMPLETED}>
+            Concluídas
         </FilterLink>
     </div>
 );

@@ -12,6 +12,7 @@ const store = createStore(rootReducer);
 import TarefaEntrada from './containers/TarefaEntrada';
 import Filtro from './components/Filtro';
 import VisibleTodoList from './containers/VisibleTodoList';
+import Contador from './containers/Contador';
 
 render(
     <Provider store={store}>
@@ -19,6 +20,7 @@ render(
             <TarefaEntrada />
             <Filtro />
             <VisibleTodoList />
+            <Contador />
         </>
     </Provider>,
     document.getElementById('root')

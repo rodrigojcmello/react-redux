@@ -1,14 +1,12 @@
 import React from 'react';
 
-const Link = ({ active, children, onClick }) => (
+const Link = (props) => (
     <button
-        onClick={onClick}
-        disabled={active}
-        style={{
-            marginLeft: '4px',
-        }}
+        onClick={props.onClick}
+        disabled={props.active}
+        style={{ marginLeft: '4px' }}
     >
-        {children}
+        {props.children}
     </button>
 );
 

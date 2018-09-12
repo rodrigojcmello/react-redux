@@ -16,10 +16,6 @@ const todos = (state = [], action) => {
                     ? { ...todo, completed: !todo.completed }
                     : todo
             );
-        case 'CONTADOR':
-            return {
-                contador: action.contador
-            };
         default:
             return state;
     }

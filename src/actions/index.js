@@ -6,10 +6,14 @@ export const addTodo = (autor, text) => ({
     text
 });
 
-let c = 0;
-export const contador = () => ({
-    type: 'CONTADOR',
-    contador: c++
+export const aumentar = (número) => ({
+    type: 'AUMENTAR',
+    número
+});
+
+export const diminuir = () => ({
+    type: 'DIMINUIR',
+    contador: -1
 });
 
 export const setVisibilityFilter = (filter) => ({

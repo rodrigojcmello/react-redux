@@ -1,32 +1,25 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { contador } from '../actions';
+import { aumentar } from '../actions';
 
-const Contador = ({ dispatch }) => {
+const Contador = (props) => {
+    console.log('contador', props);
     return (
         <div>
-            <button onClick={() => {
-                alert('ok');
-            }}>
+            <button onClick={props.aumentar}>
                 contador
             </button>
-            {/* <form
-                onSubmit={e => {
-                    e.preventDefault()
-                    if (!input.value.trim()) {
-                        return
-                    }
-                    dispatch(addTodo(input.value))
-                    input.value = ''
-                }}
-            >
-                <input ref={node => input = node} />
-                <button type="submit">
-                    Add Todo
-                </button>
-            </form> */}
+            <span>{props.contador}</span>
         </div>
     );
 };
 
-export default connect()(Contador);
+const mapStateToProps = (state) => state;
+
+const mapDispatchToProps = (dispatch) => ({
+    aumentar: () => dispatch(aumentar(10))
+});
+
+// const mapDispatchToProps = (dispatch) => bindActionCreators({ aumentar }, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Contador);

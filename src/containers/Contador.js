@@ -10,19 +10,15 @@ const Contador = (props) => {
             <button onClick={() => props.aumentar(5)}>
                 contador
             </button>
-            <span>{props.contador}</span>
+            <span>{props.contador.count}</span>
         </div>
     );
 };
 
-const mapStateToProps = (state) => ({
-    contador: state.contador
-});
+const mapStateToProps = (state) => (state);
 
-// const mapDispatchToProps = (dispatch) => ({
-//     aumentar: () => dispatch(aumentar(10))
-// });
-
-const mapDispatchToProps = (dispatch) => bindActionCreators({ aumentar }, dispatch);
+const mapDispatchToProps = (dispatch) => (
+    bindActionCreators({ aumentar }, dispatch)
+);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Contador);

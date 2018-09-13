@@ -11,11 +11,6 @@ export const aumentar = (número) => ({
     número
 });
 
-export const diminuir = () => ({
-    type: 'DIMINUIR',
-    contador: -1
-});
-
 export const setVisibilityFilter = (filter) => ({
     type: 'SET_VISIBILITY_FILTER',
     filter

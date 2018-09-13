@@ -1,10 +1,12 @@
-const contador = (state = 0, action) => {
+const contador = (state = { count: 0, nome: 'rodrigo' }, action) => {
     console.log('TCL: contador -> action', action);
     switch (action.type) {
         case 'AUMENTAR':
-            return action.número + state;
-        case 'DIMINUIR':
-            return action.contador;
+            return {
+                ...state,
+                count: action.número + state.count,
+                pão: 'de queijo'
+            };
         default:
             return state;
     }
